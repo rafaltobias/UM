@@ -5,7 +5,7 @@ from sklearn.metrics import mean_squared_error, mean_absolute_error
 np.random.seed(42)
 X = np.random.uniform(0, 10, 100)
 noise = np.random.normal(0, 1, 100)
-y = 2 * X + 3 + noise  # y = 2*X + 3 + szum
+y = 2 * X + 3 + noise  
 
 X_b = np.c_[np.ones((100, 1)), X]
 
