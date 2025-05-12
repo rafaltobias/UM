@@ -41,11 +41,6 @@ plt.title('Test Data with Predictions\n(last two features)')
 plt.xlabel(iris.feature_names[2])
 plt.ylabel(iris.feature_names[3])
 
-plt.subplot(1, 3, 3)
-sns.heatmap(y_prob[:10], annot=True, fmt='.2f', 
-            xticklabels=iris.target_names,
-            yticklabels=[f'Sample {i+1}' for i in range(10)])
-plt.title('Prediction Probabilities\n(first 10 test samples)')
 
 plt.suptitle(f'Softmax Regression Results - Accuracy: {accuracy:.2f}')
 plt.tight_layout()
