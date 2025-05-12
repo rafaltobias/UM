@@ -27,16 +27,16 @@ print(f"\nOverall Accuracy: {accuracy:.2f}")
 plt.figure(figsize=(12, 5))
 
 plt.subplot(1, 2, 1)
-sns.scatterplot(x=X_train[:, 0], y=X_train[:, 1], hue=iris.target_names[y_train],
-                style=iris.target_names[y_train], title='Training Data')
-plt.title('Training Data\n(first two features)')
+ax1 = sns.scatterplot(x=X_train[:, 0], y=X_train[:, 1], hue=iris.target_names[y_train],
+                style=iris.target_names[y_train])
+ax1.set_title('Training Data\n(first two features)')
 plt.xlabel(iris.feature_names[0])
 plt.ylabel(iris.feature_names[1])
 
 plt.subplot(1, 2, 2)
-sns.scatterplot(x=X_test[:, 0], y=X_test[:, 1], hue=iris.target_names[y_pred],
-                style=iris.target_names[y_test], title='Test Data with Predictions')
-plt.title(f'Test Data with Predictions\nAccuracy: {accuracy:.2f}')
+ax2 = sns.scatterplot(x=X_test[:, 0], y=X_test[:, 1], hue=iris.target_names[y_pred],
+                style=iris.target_names[y_test])
+ax2.set_title(f'Test Data with Predictions\nAccuracy: {accuracy:.2f}')
 plt.xlabel(iris.feature_names[0])
 plt.ylabel(iris.feature_names[1])
 
